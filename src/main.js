@@ -25,11 +25,11 @@ function setCardType(type) {
 
 setCardType("default")
 
-const ccCvc = document.getElementById("security-code")
-const CvcPattern = {
+const segurityCode = document.querySelector("#security-code")
+const segurityCodePattern = {
   mask: "000",
 }
-const CvcMasked = IMask(ccCvc, CvcPattern)
+const segurityCodeMasked = Imask(segurityCode, segurityCodePattern)
 
 const ccNumero = document.getElementById("card-number")
 const NumeroPattern = {
@@ -54,17 +54,29 @@ const NumeroPattern = {
     const FoundMask = NumeroPattern.compiledMasks.find(({ regex }) =>
       number.match(regex)
     )
-    console.log(FoundMask)
+
     return FoundMask
   },
 }
 const NumeroMasked = IMask(ccNumero, NumeroPattern)
 
-const ccNome = document.getElementById("card-holder")
-const NomePattern = {
-  mask: "A{1,30} A{1,30}",
+NumeroMasked.on("accept", function () {
+  const cardType = NumeroMasked.masked.currentMask.cardType
+  setCardType(cardType)
+  updateCardNumber(NumeroMasked.value)
+})
+
+function updateCardNumber(number) {
+  const cardNumber = document.querySelector(".cc-number")
+  cardNumber.innerText = number.length === 0 ? "0000 0000 0000 0000" : number
 }
-const NomeMasked = IMask(ccNome, NomePattern)
+
+const ccNome = document.getElementById("card-holder")
+ccNome.addEventListener("input", () => {
+  const ccHolder = document.querySelector(".cc-holder .value")
+  ccHolder.innerText =
+    ccNome.value.length === 0 ? "Fulaninho de Tal" : ccNome.value
+})
 
 const ccExpiracao = document.getElementById("expiration-date")
 const ExpiracaoPattern = {
@@ -83,3 +95,24 @@ const ExpiracaoPattern = {
   },
 }
 const ExpiracaoMasked = IMask(ccExpiracao, ExpiracaoPattern)
+
+ExpiracaoMasked.on("accept", function () {
+  updateCardExpiry(ExpiracaoMasked.value)
+})
+
+function updateCardExpiry(expiry) {
+  const cardExpiry = document.querySelector(".cc-extra .value")
+  cardExpiry.innerText = expiry.length === 0 ? "00/00" : expiry
+}
+
+const addButton = document.getElementById("AddButton")
+addButton.addEventListener("click", () => {})
+
+segurityCodeMasked.on("accept", () => {
+  updateSecurityCode(segurityCodeMasked.value)
+})
+
+function updateSecurityCode(code) {
+  const ccSecurity = document.querySelector(".cc-security .value")
+  ccSecurity.innerText = code.length === 0 ? "000" : code
+}
