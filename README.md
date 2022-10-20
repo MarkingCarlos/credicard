@@ -33,12 +33,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Rocketpay é um componente que simula o formulário de preenchimento de cartão de crédito, onde é possível adicionar máscara aos inputs e atualizar elementos HTML via DOM.
+<h2>Link: </h2> <a href="https://credicard-kappa.vercel.app">Projeto</a>
 
-## :memo: Licença
-
-Esse projeto está sob a licença MIT.
-
----
 
 Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
