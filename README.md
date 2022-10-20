@@ -1,4 +1,4 @@
-<h1 align="center"> CrediCard Explorer Lab # </h1>
+<h1 align="center"> CrediCard Explorer Lab</h1>
 
 <p align="center">
 Evento promovido pela Rocketseat para ensino de tecnologias WEB.
@@ -8,8 +8,7 @@ Evento promovido pela Rocketseat para ensino de tecnologias WEB.
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
-</p>
+  </p>
 
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
@@ -34,6 +33,3 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 <h2>Link: </h2> <a href="https://credicard-kappa.vercel.app">Projeto</a>
-
-
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
